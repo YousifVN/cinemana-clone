@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{vue,js,ts,jsx,tsx}",
+    "./presets/**/*.{js,vue,ts}",
+  ],
   theme: {
     extend: {
       colors: {
@@ -19,5 +23,5 @@ export default {
       "hanken-grotesk": ["Hanken Grotesk", "sans-serif"],
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-primeui")],
 };
