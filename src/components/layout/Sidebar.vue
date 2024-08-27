@@ -25,7 +25,7 @@
                 </router-link>
                 <ul class="space-y-2 font-medium">
                     <SidebarItem title="Home" dest="/" imgSrc="/icons/home.svg" />
-                    <SidebarItem title="Movies" imgSrc="/icons/movies.svg" />
+                    <SidebarItem title="Movies" dest="/movie" imgSrc="/icons/movies.svg" />
                     <SidebarItem title="Series" imgSrc="/icons/series.svg" />
                     <SidebarItem title="Watch List" imgSrc="/icons/watch-list.svg" />
                     <SidebarItem title="Favorites" imgSrc="/icons/favorites.svg" />
