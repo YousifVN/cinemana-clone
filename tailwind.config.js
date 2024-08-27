@@ -9,6 +9,10 @@ export default {
         "cinemana-gray": "#91979d",
         "cinemana-red": "#c82127",
       },
+      screens: {
+        "custom-761": "761px",
+        "custom-630-730": { min: "630px", max: "730px" },
+      },
     },
     fontFamily: {
       roboto: ["Roboto", "sans-serif"],

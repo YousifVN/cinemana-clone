@@ -2,7 +2,7 @@
     <div>
         <button @click="toggleSidebar" data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar"
             aria-controls="logo-sidebar" type="button"
-            class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+            class="inline-flex items-center p-2 mt-2 text-sm text-gray-500 rounded-lg ms-3 sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
             <span class="sr-only">Open sidebar</span>
             <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
@@ -17,19 +17,18 @@
             isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
         ]" aria-label="Sidebar">
             <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-                <!-- TODO: turn this into a vue router later -->
-                <a href="/" class="flex items-center ps-2.5 mb-5">
-                    <img src="/public/icons/cinemana.svg" class="h-6 me-3 sm:h-7" alt="cinemana Logo" />
+                <router-link to="/" class="flex items-center ps-2.5 mb-5">
+                    <img src="/icons/cinemana.svg" class="h-6 me-3 sm:h-7" alt="cinemana Logo" />
                     <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
                         Cinemana Clone
                     </span>
-                </a>
+                </router-link>
                 <ul class="space-y-2 font-medium">
-                    <SidebarItem title="Home" dest="/" imgSrc="/public/icons/home.svg" />
-                    <SidebarItem title="Movies" imgSrc="/public/icons/movies.svg" />
-                    <SidebarItem title="Series" imgSrc="/public/icons/series.svg" />
-                    <SidebarItem title="Watch List" imgSrc="/public/icons/watch-list.svg" />
-                    <SidebarItem title="Favorites" imgSrc="/public/icons/favorites.svg" />
+                    <SidebarItem title="Home" dest="/" imgSrc="/icons/home.svg" />
+                    <SidebarItem title="Movies" imgSrc="/icons/movies.svg" />
+                    <SidebarItem title="Series" imgSrc="/icons/series.svg" />
+                    <SidebarItem title="Watch List" imgSrc="/icons/watch-list.svg" />
+                    <SidebarItem title="Favorites" imgSrc="/icons/favorites.svg" />
                 </ul>
             </div>
         </aside>
