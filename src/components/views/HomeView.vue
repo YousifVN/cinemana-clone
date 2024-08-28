@@ -1,44 +1,22 @@
 <script setup>
-import Carousel from '../layout/Carousel.vue';
+import PageSection from '../common/PageSection.vue';
+import Hero from '../layout/Hero.vue';
+
 </script>
 
 <template>
-    <div class="relative">
-        <!-- Carousel with relative positioning -->
-        <Carousel />
+    <div class="mb-20">
+       
+        <Hero />
 
-        <!-- Floating content with absolute positioning and improved styling -->
-        <div
-            class="absolute inset-0 z-10 flex flex-col justify-between h-full p-8 pointer-events-none bg-gradient-to-r from-black/50 to-transparent">
-            <!-- Top content -->
-            <div class="w-[50%] text-left text-white space-y-4 pointer-events-auto">
-                <!-- New Release Tag -->
-                <p class="ml-5 text-lg tracking-wide text-red-500 uppercase">New Release</p>
+        <PageSection sectionTitle="Top Rated Movies" :limit="10" cardTitle="The Batman" year="2022"
+            img="/public/images/The Batman.png" />
 
-                <!-- Title and Rating on the same line -->
-                <div class="flex items-center ml-5 space-x-4">
-                    <span class="text-3xl font-bold">Avatar The Way of Water</span>
-                    <span class="flex items-center px-3 py-1 text-lg text-black bg-yellow-500 rounded-lg">
-                        <i class="fa-solid fa-star me-2"></i>6.029
-                    </span>
-                </div>
+        <PageSection sectionTitle="Top Rated Series" :limit="10" cardTitle="Avatar The Way of Water" year="2015"
+            img="/public/images/Avatar The Way of Water.png" />
 
-                <!-- Movie Description -->
-                <p class="ml-5 text-lg leading-relaxed">
-                    "Avatar: The Way of Water" follows Jake Sully and Neytiri as they fight to protect their family
-                    while exploring the breathtaking and dangerous aquatic world of Pandora. Stunning visuals and
-                    intense battles bring new challenges to their evolving journey.
-                </p>
-
-
-            </div>
-
-            <!-- Button pushed to the bottom -->
-            <div class="w-[50%] pointer-events-auto ml-5">
-                <button
-                    class="px-6 py-3 text-lg font-semibold transition duration-300 bg-red-600 rounded-lg hover:bg-red-700">Watch
-                    Now</button>
-            </div>
-        </div>
+        <PageSection sectionTitle="Popular Tv Series" :limit="10" cardTitle="All Quiet on the Western Front" year="2007"
+            img="/public/images/All Quiet on the Western Front.png" />
+            
     </div>
 </template>

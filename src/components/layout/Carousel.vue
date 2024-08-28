@@ -1,3 +1,5 @@
+<!-- Ant Design Carousel -->
+
 <template>
     <a-carousel arrows>
 
@@ -29,7 +31,7 @@
     </a-carousel>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 
 import { LeftCircleOutlined, RightCircleOutlined } from '@ant-design/icons-vue';
 
