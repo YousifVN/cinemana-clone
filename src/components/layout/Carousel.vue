@@ -1,8 +1,8 @@
-<!-- Ant Design Carousel -->
+<!-- Ant Design Vue Component -->
+<!-- https://antdv.com/components/carousel/ -->
 
 <template>
-    <a-carousel arrows>
-
+    <a-carousel arrows autoplay>
         <template #prevArrow>
             <div class="custom-slick-arrow" style="left: 10px; z-index: 1">
                 <left-circle-outlined />
@@ -13,28 +13,26 @@
                 <right-circle-outlined />
             </div>
         </template>
-
-        <div>
-            <img src="/images/All Quiet on the Western Front.png" alt="All Quiet on the Western Front"
-                class="object-cover object-top w-full h-full">
-        </div>
-        <div>
-            <img src="/images/Avatar The Way of Water.png" alt="Avatar The Way of Water"
-                class="object-cover object-top w-full h-full">
-        </div>
-        <div>
-            <img src="/images/Aftersun.png" alt="Aftersun" class="object-cover object-top w-full h-full">
-        </div>
-        <div>
-            <img src="/images/Bullet Train.png" alt="Bullet Train" class="object-cover object-top w-full h-full">
+        <div v-for="image in images" :key="image.src">
+            <img :src="image.src" :alt="image.alt" class="object-cover object-top w-full h-full">
         </div>
     </a-carousel>
 </template>
 
 <script setup>
-
+import { ref, onMounted } from 'vue';
 import { LeftCircleOutlined, RightCircleOutlined } from '@ant-design/icons-vue';
 
+const images = ref([]);
+
+onMounted(() => {
+    const imageModules = import.meta.glob('/public/images/*.png', { eager: true });
+
+    images.value = Object.entries(imageModules).map(([path, module]) => ({
+        src: path.replace('/public', ''),
+        alt: path.split('/').pop().replace('.png', '')
+    }));
+});
 </script>
 
 <style scoped>

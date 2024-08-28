@@ -15,7 +15,7 @@ import Button from './components/common/Button.vue';
             <div><Button title="Log In" icon="<i class='fa-solid fa-user'></i>" class="mt-3 mr-5" /></div>
             
         </div>
-        <div class="text-white sm:ml-[270px]">
+        <div class="text-white sm:ml-[260px]">
             <RouterView />
         </div>
     </div>
