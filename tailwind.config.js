@@ -3,7 +3,7 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
-    "./presets/**/*.{js,vue,ts}",
+    
   ],
   theme: {
     extend: {
@@ -23,5 +23,5 @@ export default {
       "hanken-grotesk": ["Hanken Grotesk", "sans-serif"],
     },
   },
-  plugins: [require("tailwindcss-primeui")],
+  plugins: [],
 };
