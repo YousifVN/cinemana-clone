@@ -10,13 +10,13 @@ import Hero from '../layout/Hero.vue';
         <Hero />
 
         <PageSection sectionTitle="Top Rated Movies" :limit="10" cardTitle="The Batman" year="2022"
-            img="/public/images/The Batman.png" />
+            img="/images/The Batman.png" />
 
         <PageSection sectionTitle="Top Rated Series" :limit="10" cardTitle="Avatar The Way of Water" year="2015"
-            img="/public/images/Avatar The Way of Water.png" />
+            img="/images/Avatar The Way of Water.png" />
 
         <PageSection sectionTitle="Popular Tv Series" :limit="10" cardTitle="All Quiet on the Western Front" year="2007"
-            img="/public/images/All Quiet on the Western Front.png" />
+            img="/images/All Quiet on the Western Front.png" />
             
     </div>
 </template>

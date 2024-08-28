@@ -15,12 +15,12 @@ import SubCarousel from '../common/SubCarousel.vue'
 
         <SubCarousel>
             <div v-for="card in 10">
-                <Card title="The Batman" year="2022" img="/public/images/The Batman.png" />
+                <Card title="The Batman" year="2022" img="/images/The Batman.png" />
             </div>
         </SubCarousel>
 
         <PageSection sectionTitle="Top Rated Series" :limit="10" cardTitle="Avatar The Way of Water" year="2014"
-            img="/public/images/Avatar The Way of Water.png" />
+            img="/images/Avatar The Way of Water.png" />
     </div>
 </template>
 
