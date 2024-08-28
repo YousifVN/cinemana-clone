@@ -27,7 +27,7 @@ import Carousel from './Carousel.vue';
                 </p>
             </div>
 
-            <div class="w-full sm:w-[50%] pointer-events-auto ml-5 sm:ml-2">
+            <div class="w-full sm:w-[50%] pointer-events-auto ml-5 sm:ml-2 mb-10">
                 <button
                     class="px-3 py-2 text-sm font-semibold transition duration-300 bg-red-600 rounded-lg hover:bg-red-700">Watch
                     Now</button>

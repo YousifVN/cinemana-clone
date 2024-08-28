@@ -1,8 +1,8 @@
 <template>
     <div class="mb-14">
         <img :src="img" class="w-64 rounded-md h-70">
-        <p class="mt-2 text-lg">{{ title }}</p>
-        <span>{{ year }}</span>
+        <p class="mt-2 text-base">{{ title }}</p>
+        <p class="text-sm">{{ year }}</p>
     </div>
 </template>
 
@@ -16,4 +16,4 @@ defineProps({
 
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>
