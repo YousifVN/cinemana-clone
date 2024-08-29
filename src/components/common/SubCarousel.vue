@@ -13,7 +13,5 @@ import { NCarousel } from 'naive-ui'
 </template>
 
 <style scoped>
-.n-card {
-    max-width: 300px;
-}
+
 </style>

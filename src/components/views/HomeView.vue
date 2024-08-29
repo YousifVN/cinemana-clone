@@ -8,7 +8,7 @@ import PageSection from '../common/PageSection.vue';
 <template>
     <div class="mb-20">
 
-        <Hero />
+        <Hero class="mb-20" />
 
         <div class="mx-3">
             <PageSection sectionTitle="Top Rated Movies" param="/movie/popular" />
