@@ -1,5 +1,5 @@
 <template>
-    <div class="mb-14">
+    <div class="mb-10">
         <img :src="img" class="w-64 rounded-md h-70" :alt="title">
         <p class="mt-2 text-base font-semibold truncate-title">{{ title }}</p>
         <p class="text-sm text-gray-500">{{ year }}</p>

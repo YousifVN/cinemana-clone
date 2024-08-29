@@ -53,38 +53,50 @@ const truncateOverview = (text, maxLength = 150) => {
         <div
             class="absolute inset-0 z-10 flex flex-col justify-between h-[580px] md:h-[620px] p-8 pointer-events-none bg-gradient-to-r from-black/50 to-transparent sm:p-4">
             <div class="w-full md:w-[50%] space-y-4 text-left text-white pointer-events-auto mt-5">
+                
                 <p class="ml-5 text-lg tracking-wide text-red-500 uppercase sm:ml-2">New Release</p>
+                
                 <div class="flex items-center ml-5 space-x-4 sm:ml-2">
+                    
                     <span class="text-3xl font-bold">{{ movies[currentMovieIndex]?.title }}</span>
+                    
                     <span
                         :class="['flex items-center px-3 py-1 text-lg text-black rounded-lg sm:text-sm', getRatingColor]">
+                        
                         <i class="fa-solid fa-star me-2"></i>{{ movies[currentMovieIndex]?.vote_average?.toFixed(1) }}
                     </span>
+                    
                 </div>
                 <div class="ml-5 sm:ml-2">
+                    
                     <p class="text-base leading-relaxed">
                         {{ truncateOverview(movies[currentMovieIndex]?.overview || '') }}
                     </p>
-                    
+
                     <!-- This is disabled for now -->
                     <button class="text-sm text-blue-400 hover:text-blue-300 focus:outline-none">
                         Read More
                     </button>
+                    
                 </div>
+                
                 <button
                     class="px-3 py-2 mb-3 text-sm font-semibold text-white transition duration-300 bg-red-600 rounded-lg hover:bg-red-700">
                     Watch Now
                 </button>
+                
             </div>
             <div class="w-full pointer-events-auto">
                 <n-carousel v-if="movies.length" :slides-per-view="5" :space-between="20" :loop="true"
                     :show-dots="false" mousewheel autoplay>
+                    
                     <n-carousel-item v-for="movie in movies" :key="movie.id">
                         <div class="mt-3">
                             <img :src="movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : '/placeholder-image.jpg'"
                                 class="object-cover w-32 h-48 rounded-xl" :alt="movie.title">
                         </div>
                     </n-carousel-item>
+                    
                 </n-carousel>
                 <p v-else class="text-white">No movies available</p>
             </div>

@@ -1,4 +1,7 @@
 <script setup>
+
+// Fetching the API:
+
 // import { ref, onMounted } from 'vue'
 // import api from '@/services/api'
 
@@ -16,7 +19,7 @@
 
 <template>
     <div>
-        <h1 class="text-3xl text-center">Movie View</h1>
+        <h1 class="mt-5 text-3xl text-center">Movie View</h1>
 
         <!-- <div v-for="movie in movies" :key="movie.id">
             <ul>

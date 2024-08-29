@@ -35,7 +35,7 @@ const getReleaseYear = (item) => {
 
 <template>
     <section class="mt-10">
-        <h2 class="text-3xl capitalize">{{ sectionTitle }}</h2>
+        <h2 class="mb-5 text-3xl capitalize">{{ sectionTitle }}</h2>
         <SubCarousel>
             <div v-for="movie in movies" :key="movie.id">
                 <Card :title="getTitle(movie)" :img="`https://image.tmdb.org/t/p/w500${movie.poster_path}`"
