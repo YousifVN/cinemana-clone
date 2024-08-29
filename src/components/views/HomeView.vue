@@ -18,7 +18,6 @@ import PageSection from '../common/PageSection.vue';
             <PageSection sectionTitle="Trending Movies" param="/trending/movie/week?language=en-US" />
 
             <PageSection sectionTitle="Trending Tv Series" param="/trending/tv/week?language=en-US" />
-
         </div>
 
     </div>
