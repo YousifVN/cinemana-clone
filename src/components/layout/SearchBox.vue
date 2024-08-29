@@ -13,7 +13,7 @@
 
             <div class="relative w-full">
                 <input type="text" id="simple-search"
-                    class="block w-full p-1.5 px-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring-0 focus:border-cinemana-red dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                    class="block w-full p-1.5 px-4 text-sm border rounded-lg focus:outline-none focus:ring-0 focus:border-cinemana-red bg-gray-700 border-gray-600 placeholder-gray-400 text-white"
                     placeholder="Search Cinemana..." required />
             </div>
 
