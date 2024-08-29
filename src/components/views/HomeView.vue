@@ -6,7 +6,7 @@ import PageSection from '../common/PageSection.vue';
 </script>
 
 <template>
-    <div class="mb-20">
+    <div class="mb-10">
 
         <Hero class="mb-20" />
 
