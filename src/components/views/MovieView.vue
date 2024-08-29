@@ -1,29 +1,28 @@
 <script setup>
+import { ref, onMounted } from 'vue'
+import api from '@/services/api'
 
-import Card from '../common/Card.vue'
-import PageSection from '../common/PageSection.vue';
-import SubCarousel from '../common/SubCarousel.vue'
+const movies = ref([])
 
-
+onMounted(async () => {
+    try {
+        const response = await api.get('/movie/popular')
+        movies.value = response.data.results
+    } catch (error) {
+        console.error('Error fetching movies:', error)
+    }
+})
 </script>
 
 <template>
     <div>
-        Movie View
-
-        <h2 class="text-3xl">Top Rated Movies</h2>
-
-        <SubCarousel>
-            <div v-for="card in 10">
-                <Card title="The Batman" year="2022" img="/images/The Batman.png" />
-            </div>
-        </SubCarousel>
-
-        <PageSection sectionTitle="Top Rated Series" :limit="10" cardTitle="Avatar The Way of Water" year="2014"
-            img="/images/Avatar The Way of Water.png" />
+        <h1 class="text-3xl text-center">Movie View</h1>
+        <div v-for="movie in movies" :key="movie.id">
+            <ul>
+                <li>{{ movie.original_title }}</li>
+            </ul>
+        </div>
     </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
