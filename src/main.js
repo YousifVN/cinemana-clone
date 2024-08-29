@@ -9,7 +9,7 @@ import Antd from "ant-design-vue";
 
 const app = createApp(App);
 
-app.config.globalProperties.$http = api; // Correct way to add global properties in Vue 3
+app.config.globalProperties.$http = api;
 
 app.use(createPinia());
 app.use(router);

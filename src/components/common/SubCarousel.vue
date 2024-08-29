@@ -6,7 +6,7 @@ import { NCarousel } from 'naive-ui'
 
 <template>
 
-    <n-carousel :slides-per-view="5" :space-between="20" :loop="false" draggable show-arrow dot-type="line" mousewheel>
+    <n-carousel :slides-per-view="5" :space-between="20" :loop="false" draggable show-arrow :show-dots="false" mousewheel>
         <slot />
     </n-carousel>
 

@@ -1,6 +1,7 @@
 <script setup>
-import PageSection from '../common/PageSection.vue';
+
 import Hero from '../layout/Hero.vue';
+import PageSection from '../common/PageSection.vue';
 
 </script>
 
@@ -10,12 +11,14 @@ import Hero from '../layout/Hero.vue';
         <Hero />
 
         <div class="mx-3">
-            <PageSection sectionTitle="Top Rated Movies" :limit="10" cardTitle="The Batman" year="2022"
-                img="/images/The Batman.png" />
-            <PageSection sectionTitle="Top Rated Series" :limit="10" cardTitle="Avatar The Way of Water" year="2015"
-                img="/images/Avatar The Way of Water.png" />
-            <PageSection sectionTitle="Popular Tv Series" :limit="10" cardTitle="All Quiet on the Western Front"
-                year="2007" img="/images/All Quiet on the Western Front.png" />
+            <PageSection sectionTitle="Top Rated Movies" param="/movie/popular" />
+
+            <PageSection sectionTitle="Top Rated Series" param="/tv/top_rated" />
+
+            <PageSection sectionTitle="Trending Movies" param="/trending/movie/week?language=en-US" />
+
+            <PageSection sectionTitle="Trending Tv Series" param="/trending/tv/week?language=en-US" />
+
         </div>
 
     </div>

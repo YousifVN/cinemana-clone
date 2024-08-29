@@ -1,28 +1,48 @@
-<template>
-    <section class="mt-10">
-        <h2 class="text-3xl capitalize">{{ sectionTitle }}</h2>
-        <SubCarousel>
-            <div v-for="index in limit" :key="index">
-                <Card :title="cardTitle" :year="year" :img="img" />
-            </div>
-        </SubCarousel>
-    </section>
-</template>
-
 <script setup>
+import { ref, onMounted, computed } from 'vue'
+import api from '@/services/api'
+
 import Card from '../common/Card.vue';
 import SubCarousel from '../common/SubCarousel.vue';
 
 const props = defineProps({
     sectionTitle: String,
-    limit: {
-        type: Number,
-        default: 10
-    },
-    cardTitle: String,
-    year: String,
-    img: String
+    param: String
 });
+
+const movies = ref([])
+
+const isMovie = computed(() => props.param.includes('movie'))
+
+onMounted(async () => {
+    try {
+        const response = await api.get(`${props.param}`)
+        movies.value = response.data.results
+    } catch (error) {
+        console.error('Error fetching movies:', error)
+    }
+})
+
+const getTitle = (item) => {
+    return isMovie.value ? item.original_title : item.original_name
+}
+
+const getReleaseYear = (item) => {
+    const releaseDate = isMovie.value ? item.release_date : item.first_air_date
+    return releaseDate ? releaseDate.substring(0, 4) : ''
+}
 </script>
+
+<template>
+    <section class="mt-10">
+        <h2 class="text-3xl capitalize">{{ sectionTitle }}</h2>
+        <SubCarousel>
+            <div v-for="movie in movies" :key="movie.id">
+                <Card :title="getTitle(movie)" :img="`https://image.tmdb.org/t/p/w500${movie.poster_path}`"
+                    :year="getReleaseYear(movie)" />
+            </div>
+        </SubCarousel>
+    </section>
+</template>
 
 <style scoped></style>
