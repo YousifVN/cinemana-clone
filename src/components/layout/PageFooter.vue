@@ -1,5 +1,5 @@
 <template>
-  <footer class="py-6 mb-5 text-center text-white bg-cinemana-primary">
+  <footer class="bottom-0 left-0 right-0 py-6 mb-3 text-center text-white bg-cinemana-primary">
     <div class="mb-2">Cinemana Clone is not an official website</div>
     <div class="flex items-center justify-center space-x-5">
       <div>&copy; {{ year }} YousifVN</div>
