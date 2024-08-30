@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
+
 import api from '@/services/api'
 
 import Card from '../common/Card.vue';
